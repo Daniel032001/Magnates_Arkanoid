@@ -1,8 +1,0 @@
-C:\Users\refar_000\Desktop\POO\C#\Magnates Arkanoid\Magnates Arkanoid\bin\Debug\Magnates_Arkanoid.exe.config
-C:\Users\refar_000\Desktop\POO\C#\Magnates Arkanoid\Magnates Arkanoid\bin\Debug\Magnates_Arkanoid.exe
-C:\Users\refar_000\Desktop\POO\C#\Magnates Arkanoid\Magnates Arkanoid\bin\Debug\Magnates_Arkanoid.pdb
-C:\Users\refar_000\Desktop\POO\C#\Magnates Arkanoid\Magnates Arkanoid\obj\Debug\Magnates Arkanoid.csprojAssemblyReference.cache
-C:\Users\refar_000\Desktop\POO\C#\Magnates Arkanoid\Magnates Arkanoid\obj\Debug\Magnates_Arkanoid.Properties.Resources.resources
-C:\Users\refar_000\Desktop\POO\C#\Magnates Arkanoid\Magnates Arkanoid\obj\Debug\Magnates Arkanoid.csproj.GenerateResource.cache
-C:\Users\refar_000\Desktop\POO\C#\Magnates Arkanoid\Magnates Arkanoid\obj\Debug\Magnates_Arkanoid.exe
-C:\Users\refar_000\Desktop\POO\C#\Magnates Arkanoid\Magnates Arkanoid\obj\Debug\Magnates_Arkanoid.pdb

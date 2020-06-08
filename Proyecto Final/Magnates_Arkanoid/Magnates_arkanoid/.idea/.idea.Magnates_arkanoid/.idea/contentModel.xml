@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\felix\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\felix\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Magnates_arkanoid.1834637224.00" t="ExcludeRecursive" />
+    <e p="C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\Magnates_Arkanoid\Magnates_Arkanoid" t="IncludeFlat">
+      <e p="Magnates_Arkanoid" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Game.cs" t="Include" />
+        <e p="Game.Designer.cs" t="Include" />
+        <e p="Magnates_arkanoid.csproj" t="IncludeRecursive" />
+        <e p="MainMenu.cs" t="Include" />
+        <e p="MainMenu.Designer.cs" t="Include" />
+        <e p="MainMenu.resx" t="Include" />
+        <e p="Model" t="Include">
+          <e p="Brick.cs" t="Include" />
+          <e p="DataBaseConnection.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerCRUD.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="add.jpg" t="Include" />
+          <e p="StartMenu.jpg" t="Include" />
+          <e p="top.jpg" t="Include" />
+        </e>
+        <e p="StartMenu.cs" t="Include" />
+        <e p="StartMenu.Designer.cs" t="Include" />
+        <e p="StartMenu.resx" t="Include" />
+        <e p="Top.cs" t="Include" />
+        <e p="Top.Designer.cs" t="Include" />
+        <e p="Top.resx" t="Include" />
+        <e p="User.cs" t="Include" />
+        <e p="User.Designer.cs" t="Include" />
+        <e p="User.resx" t="Include" />
+      </e>
+      <e p="Magnates_arkanoid.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magnates_arkanoid", "Magnates_arkanoid\Magnates_arkanoid.csproj", "{EB37E327-00AE-4C97-9830-E8F5222FF7C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB37E327-00AE-4C97-9830-E8F5222FF7C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB37E327-00AE-4C97-9830-E8F5222FF7C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB37E327-00AE-4C97-9830-E8F5222FF7C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB37E327-00AE-4C97-9830-E8F5222FF7C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

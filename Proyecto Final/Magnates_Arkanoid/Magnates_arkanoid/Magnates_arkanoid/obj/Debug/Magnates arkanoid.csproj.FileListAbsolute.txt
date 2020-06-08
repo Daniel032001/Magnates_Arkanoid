@@ -1,0 +1,10 @@
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\obj\Debug\Magnates arkanoid.csprojAssemblyReference.cache
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\obj\Debug\Magnates_arkanoid.Properties.Resources.resources
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\obj\Debug\Magnates arkanoid.csproj.GenerateResource.cache
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\bin\Debug\Magnates_arkanoid.exe.config
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\bin\Debug\Magnates_arkanoid.exe
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\bin\Debug\Magnates_arkanoid.pdb
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\obj\Debug\Magnates_arkanoid.exe
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\obj\Debug\Magnates_arkanoid.pdb
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\obj\Debug\Magnates_arkanoid.Top10.resources
+C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\MagnatesArkanoid\Magnates arkanoid\Magnates arkanoid\obj\Debug\Magnates_arkanoid.User.resources

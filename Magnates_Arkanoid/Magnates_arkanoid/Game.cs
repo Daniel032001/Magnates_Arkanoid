@@ -70,5 +70,10 @@ namespace Magnates_arkanoid
                 ptbTable.Left -= 40;
             }
         }
+
+        private void Game_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

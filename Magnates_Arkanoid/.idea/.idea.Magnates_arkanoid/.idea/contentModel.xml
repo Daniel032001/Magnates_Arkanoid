@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\felix\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\felix\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Magnates_arkanoid.1834637224.00" t="ExcludeRecursive" />
-    <e p="C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Proyecto Final\Magnates_Arkanoid\Magnates_Arkanoid" t="IncludeFlat">
+    <e p="C:\Users\felix\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Magnates_arkanoid.953998607.00" t="ExcludeRecursive" />
+    <e p="C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Magnates_Arkanoid" t="IncludeFlat">
       <e p="Magnates_Arkanoid" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />

@@ -35,11 +35,11 @@ namespace Magnates_arkanoid
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 562);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClientSize = new System.Drawing.Size(600, 365);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "MainMenu";
             this.Text = "Magnates Arkanoid";
             this.Load += new System.EventHandler(this.MainMenu_Load);

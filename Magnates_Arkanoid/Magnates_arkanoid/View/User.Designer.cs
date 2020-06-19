@@ -73,7 +73,6 @@ namespace Magnates_arkanoid
             this.tableLayoutPanel1.Controls.Add(this.buttonRegresar, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.textBoxUsuario, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.buttonJugar, 1, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";

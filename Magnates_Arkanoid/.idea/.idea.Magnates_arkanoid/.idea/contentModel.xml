@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Daniel Mauricio\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Daniel Mauricio\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Magnates_Arkanoid.27703941.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Daniel Mauricio\Desktop\POO\Magnates_Arkanoid\Magnates_Arkanoid" t="IncludeFlat">
+    <e p="C:\Users\felix\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\felix\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_Magnates_arkanoid.953998607.00" t="ExcludeRecursive" />
+    <e p="C:\Users\felix\OneDrive\Desktop\Magnates_Arkanoid\Magnates_Arkanoid" t="IncludeFlat">
       <e p="Magnates_Arkanoid" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Controller" t="Include">
+          <e p="GameData.cs" t="Include" />
+        </e>
         <e p="Game.cs" t="Include" />
         <e p="Game.Designer.cs" t="Include" />
         <e p="Game.resx" t="Include" />
@@ -37,6 +40,8 @@
           <e p="4.jpg" t="Include" />
           <e p="5.jpg" t="Include" />
           <e p="add.jpg" t="Include" />
+          <e p="ball.jpg" t="Include" />
+          <e p="ball1.jpg" t="Include" />
           <e p="play.jpg" t="Include" />
           <e p="StartMenu.jpg" t="Include" />
           <e p="table.png" t="Include" />
@@ -51,6 +56,7 @@
         <e p="User.cs" t="Include" />
         <e p="User.Designer.cs" t="Include" />
         <e p="User.resx" t="Include" />
+        <e p="View" t="Include" />
       </e>
       <e p="Magnates_Arkanoid.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

@@ -91,6 +91,7 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Controller\GameData.cs" />
         <Compile Include="Game.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -172,10 +173,15 @@
       <Content Include="Resources\4.jpg" />
       <Content Include="Resources\5.jpg" />
       <Content Include="Resources\add.jpg" />
+      <Content Include="Resources\ball.jpg" />
+      <Content Include="Resources\ball1.jpg" />
       <Content Include="Resources\play.jpg" />
       <Content Include="Resources\StartMenu.jpg" />
       <Content Include="Resources\table.png" />
       <Content Include="Resources\top.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="View" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

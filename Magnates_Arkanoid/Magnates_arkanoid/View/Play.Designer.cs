@@ -42,11 +42,10 @@ namespace Magnates_arkanoid
             this.ptbTable.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbTable.BackColor = System.Drawing.Color.Transparent;
             this.ptbTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ptbTable.Image = global::Magnates_arkanoid.Properties.Resources.table;
-            this.ptbTable.Location = new System.Drawing.Point(251, 495);
-            this.ptbTable.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.ptbTable.Location = new System.Drawing.Point(188, 322);
+            this.ptbTable.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.ptbTable.Name = "ptbTable";
-            this.ptbTable.Size = new System.Drawing.Size(299, 35);
+            this.ptbTable.Size = new System.Drawing.Size(224, 23);
             this.ptbTable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbTable.TabIndex = 2;
             this.ptbTable.TabStop = false;
@@ -57,14 +56,13 @@ namespace Magnates_arkanoid
             // 
             // Play
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Magnates_arkanoid.Properties.Resources.play;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.ptbTable);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Play";
-            this.Size = new System.Drawing.Size(800, 561);
+            this.Size = new System.Drawing.Size(600, 365);
             this.Load += new System.EventHandler(this.Game_Load);
             this.Click += new System.EventHandler(this.Play_Click);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Game_MouseMove);
@@ -73,9 +71,8 @@ namespace Magnates_arkanoid
         }
 
         private System.Windows.Forms.PictureBox ptbTable;
+        private System.Windows.Forms.Timer timer1;
 
         #endregion
-
-        private System.Windows.Forms.Timer timer1;
     }
 }

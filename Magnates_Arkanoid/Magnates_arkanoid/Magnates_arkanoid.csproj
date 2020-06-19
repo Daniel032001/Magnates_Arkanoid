@@ -92,48 +92,42 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Controller\GameData.cs" />
-        <Compile Include="Game.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Game.Designer.cs">
-          <DependentUpon>Game.cs</DependentUpon>
-        </Compile>
-        <Compile Include="MainMenu.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="MainMenu.Designer.cs">
-          <DependentUpon>MainMenu.cs</DependentUpon>
-        </Compile>
         <Compile Include="Model\Brick.cs" />
         <Compile Include="Model\DataBaseConnection.cs" />
         <Compile Include="Model\Player.cs" />
         <Compile Include="Model\PlayerCRUD.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="StartMenu.cs">
+        <Compile Include="View\MainMenu.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="View\MainMenu.Designer.cs">
+          <DependentUpon>MainMenu.cs</DependentUpon>
+        </Compile>
+        <Compile Include="View\Play.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="StartMenu.Designer.cs">
+        <Compile Include="View\Play.Designer.cs">
+          <DependentUpon>Play.cs</DependentUpon>
+        </Compile>
+        <Compile Include="View\StartMenu.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="View\StartMenu.Designer.cs">
           <DependentUpon>StartMenu.cs</DependentUpon>
         </Compile>
-        <Compile Include="Top.cs">
+        <Compile Include="View\Top.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="Top.Designer.cs">
+        <Compile Include="View\Top.Designer.cs">
           <DependentUpon>Top.cs</DependentUpon>
         </Compile>
-        <Compile Include="User.cs">
+        <Compile Include="View\User.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="User.Designer.cs">
+        <Compile Include="View\User.Designer.cs">
           <DependentUpon>User.cs</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="Game.resx">
-          <DependentUpon>Game.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="MainMenu.resx">
-          <DependentUpon>MainMenu.cs</DependentUpon>
-        </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,13 +137,19 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="StartMenu.resx">
+        <EmbeddedResource Include="View\MainMenu.resx">
+          <DependentUpon>MainMenu.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="View\Play.resx">
+          <DependentUpon>Play.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="View\StartMenu.resx">
           <DependentUpon>StartMenu.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Top.resx">
+        <EmbeddedResource Include="View\Top.resx">
           <DependentUpon>Top.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="User.resx">
+        <EmbeddedResource Include="View\User.resx">
           <DependentUpon>User.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
@@ -179,9 +179,6 @@
       <Content Include="Resources\StartMenu.jpg" />
       <Content Include="Resources\table.png" />
       <Content Include="Resources\top.jpg" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="View" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,21 +10,45 @@ namespace Magnates_arkanoid
         private StartMenu start; 
         private Top top;
         private User user;
+        private Play play;
         public MainMenu()
         {
             InitializeComponent();
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
+        }
+       
+        protected override CreateParams CreateParams//Mejora en la interfaz grafica 
+        {
+            get
+            {
+                CreateParams handleParam = base.CreateParams;
+                handleParam.ExStyle |= 0x02000000;
+                return handleParam;
+            }
+        }
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            
             start=new StartMenu();
             start.Dock = DockStyle.Fill;
             start.Width = Width;
             start.Height = Height;
+            play = new Play();
+            play.Dock = DockStyle.Fill;
+            play.Width = Width;
+            play.Height = Height;
+            top= new Top();
+            top.Dock = DockStyle.Fill;
+            top.Width = Width;
+            top.Height = Height;
             Controls.Add(start);
-        }
-
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
+            user=new User();
+            user.Dock = DockStyle.Fill;
+            user.Width = Width;
+            user.Height = Height;
+            user.onClickAdd += onClickAdd;
             start.onClickButton += onClickJugar;
             start.onClickButtonTop += OnClickTop; 
             start.OnClickButtonExit += OnClickExit;
@@ -33,10 +57,6 @@ namespace Magnates_arkanoid
         public void OnClickTop(object sender, EventArgs e)
         {
             Controls.Remove(start);
-            top= new Top();
-            top.Dock = DockStyle.Fill;
-            top.Width = Width;
-            top.Height = Height;
             Controls.Add(top);
         }
         public void OnClickExit(object sender, EventArgs e)
@@ -45,20 +65,14 @@ namespace Magnates_arkanoid
         }
         public void onClickJugar(object sender, EventArgs e)
         {
-            Controls.Remove(start);
-            user=new User();
-            user.Dock = DockStyle.Fill;
-            user.Width = Width;
-            user.Height = Height;
-            user.onClickAdd += onClickAdd;
+            Controls.Remove(start); ;
             Controls.Add(user);
         }
 
         public void onClickAdd(object sender, EventArgs e)
-        {
-            this.Hide();
-            Game juego = new Game();
-            juego.Show();
+        { 
+            Controls.Remove(user); 
+            Controls.Add(play); 
         }
     }
 }

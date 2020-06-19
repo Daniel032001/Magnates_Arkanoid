@@ -10,13 +10,7 @@
         <e p="Controller" t="Include">
           <e p="GameData.cs" t="Include" />
         </e>
-        <e p="Game.cs" t="Include" />
-        <e p="Game.Designer.cs" t="Include" />
-        <e p="Game.resx" t="Include" />
         <e p="Magnates_Arkanoid.csproj" t="IncludeRecursive" />
-        <e p="MainMenu.cs" t="Include" />
-        <e p="MainMenu.Designer.cs" t="Include" />
-        <e p="MainMenu.resx" t="Include" />
         <e p="Model" t="Include">
           <e p="Brick.cs" t="Include" />
           <e p="DataBaseConnection.cs" t="Include" />
@@ -47,16 +41,23 @@
           <e p="table.png" t="Include" />
           <e p="top.jpg" t="Include" />
         </e>
-        <e p="StartMenu.cs" t="Include" />
-        <e p="StartMenu.Designer.cs" t="Include" />
-        <e p="StartMenu.resx" t="Include" />
-        <e p="Top.cs" t="Include" />
-        <e p="Top.Designer.cs" t="Include" />
-        <e p="Top.resx" t="Include" />
-        <e p="User.cs" t="Include" />
-        <e p="User.Designer.cs" t="Include" />
-        <e p="User.resx" t="Include" />
-        <e p="View" t="Include" />
+        <e p="View" t="Include">
+          <e p="MainMenu.cs" t="Include" />
+          <e p="MainMenu.Designer.cs" t="Include" />
+          <e p="MainMenu.resx" t="Include" />
+          <e p="Play.cs" t="Include" />
+          <e p="Play.Designer.cs" t="Include" />
+          <e p="Play.resx" t="Include" />
+          <e p="StartMenu.cs" t="Include" />
+          <e p="StartMenu.Designer.cs" t="Include" />
+          <e p="StartMenu.resx" t="Include" />
+          <e p="Top.cs" t="Include" />
+          <e p="Top.Designer.cs" t="Include" />
+          <e p="Top.resx" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="User.Designer.cs" t="Include" />
+          <e p="User.resx" t="Include" />
+        </e>
       </e>
       <e p="Magnates_Arkanoid.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

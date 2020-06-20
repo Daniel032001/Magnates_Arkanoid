@@ -168,10 +168,15 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="Resources\1.jpg" />
+      <Content Include="Resources\11.jpeg" />
       <Content Include="Resources\2.jpg" />
+      <Content Include="Resources\22.jpeg" />
       <Content Include="Resources\3.jpg" />
+      <Content Include="Resources\33.jpeg" />
       <Content Include="Resources\4.jpg" />
+      <Content Include="Resources\44.jpeg" />
       <Content Include="Resources\5.jpg" />
+      <Content Include="Resources\55.jpeg" />
       <Content Include="Resources\add.jpg" />
       <Content Include="Resources\ball.jpg" />
       <Content Include="Resources\ball1.jpg" />

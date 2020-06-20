@@ -31,16 +31,25 @@ namespace Magnates_arkanoid
         private void Game_Load(object sender, EventArgs e)
         {
             loadBricks();
+            lblLifes.Text = " : "+GameData.lifes;
+            lblPoints.Text = " " + GameData.points;
+            lblLifes.Top =lblPoints.Top= Height-(Height - 30);
+            lblPoints.Left = Width - 150;
             ptbTable.Top = Height - ptbTable.Height - 80;
             ptbTable.Left = (Width / 2) - (ptbTable.Width / 2);
+            LoadBall();
+            ball.Top = ptbTable.Top - ball.Height-20;
+            timer1.Start();
+        }
+
+        public void LoadBall()
+        {
             ball = new PictureBox();
             ball.Width = ball.Height = 30;
             ball.BackgroundImage = Image.FromFile("../../resources/ball.jpg");
             ball.BackgroundImageLayout = ImageLayout.Stretch;
-            ball.Top = ptbTable.Top - ball.Height-20;
             ball.Left = ptbTable.Left + (ptbTable.Width / 2) - (ball.Width / 2);
             Controls.Add(ball); 
-            timer1.Start();
         }
         public void loadBricks()
         {
@@ -53,7 +62,7 @@ namespace Magnates_arkanoid
                 for (int k = 0; k < columns; k++)
                 {
                     Bricks[i, k] = new Brick();
-                    if (i == 0)
+                    if (i == 0 || i==2)
                     {
                         Bricks[i, k].hits = 2;
                     }
@@ -66,10 +75,12 @@ namespace Magnates_arkanoid
                     Bricks[i, k].Width = brickWidth;
                     Bricks[i, k].Left = k * brickWidth;
                     Bricks[i, k].Top = i * brickHeight + 80;
-                    Bricks[i, k].BackgroundImage = Image.FromFile("../../resources/" + RdmNumber() + ".jpg");
+                    int numero = RdmNumber();
+                    string valor = numero.ToString();
+                    Bricks[i, k].BackgroundImage = Image.FromFile("../../resources/" + numero + ".jpg");
                     Bricks[i, k].BackgroundImageLayout = ImageLayout.Stretch;
                     Bricks[i, k].BorderStyle = BorderStyle.Fixed3D;
-                    Bricks[i, k].Tag = "tileTag";
+                    Bricks[i, k].Tag =valor+".jpg";
                     Controls.Add(Bricks[i, k]);
                 }
             }
@@ -113,7 +124,22 @@ namespace Magnates_arkanoid
         {
             if (ball.Bottom > Height)
             {
-                Application.Exit();
+                GameData.lifes --; 
+                if (GameData.lifes > 0)
+               { 
+                    Controls.Remove(ball);
+                    ball = null;
+                    GameData.dirX=15;
+                    GameData.dirY=-GameData.dirX;
+                    GameData.startedgame=false; 
+                    LoadBall();
+                    lblLifes.Text=" : "+GameData.lifes;
+                    ball.Top = ptbTable.Top - ball.Height;
+                }
+                else
+                {
+                    Application.Exit();
+                }
             }
 
             if (ball.Left < 0 || ball.Right > Width)
@@ -133,13 +159,21 @@ namespace Magnates_arkanoid
                 {
                     if (Bricks[i, j] != null && ball.Bounds.IntersectsWith(Bricks[i, j].Bounds))
                     {
-                        Bricks[i, j].hits--;
+                        Bricks[i, j].hits--; 
                         if (Bricks[i, j].hits == 0)
                         {
+                            GameData.calculatePoints(Bricks[i,j].Tag.ToString());
                             Controls.Remove(Bricks[i, j]);
                             Bricks[i, j] = null;
+                            lblPoints.Text = GameData.points.ToString();
                         }
-
+                        else
+                        {
+                            String imagen = Bricks[i, j].Tag.ToString().Substring(0, 1);
+                            String nuevaimagen = imagen+Bricks[i, j].Tag.ToString().Substring(0,2); 
+                            Bricks[i,j].BackgroundImage=Image.FromFile("../../resources/"+nuevaimagen+"jpeg");
+                            Bricks[i, j].Tag = nuevaimagen + "jpeg";
+                        }
                         GameData.dirY = -GameData.dirY;
                         return;
                     }

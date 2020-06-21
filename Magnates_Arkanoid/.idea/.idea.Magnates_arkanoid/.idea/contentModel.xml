@@ -14,7 +14,6 @@
         <e p="Model" t="Include">
           <e p="Brick.cs" t="Include" />
           <e p="DataBaseConnection.cs" t="Include" />
-          <e p="Player.cs" t="Include" />
           <e p="PlayerCRUD.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="ScoreCRUD.cs" t="Include" />
@@ -41,8 +40,7 @@
           <e p="5.jpg" t="Include" />
           <e p="55.jpeg" t="Include" />
           <e p="add.jpg" t="Include" />
-          <e p="ball.jpg" t="Include" />
-          <e p="ball1.jpg" t="Include" />
+          <e p="ball.png" t="Include" />
           <e p="play.jpg" t="Include" />
           <e p="StartMenu.jpg" t="Include" />
           <e p="table.png" t="Include" />

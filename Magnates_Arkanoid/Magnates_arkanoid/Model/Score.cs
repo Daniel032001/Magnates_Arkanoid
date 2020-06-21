@@ -4,7 +4,7 @@
     {
         public int id{ get; set; } 
         public string player { get;set; } 
-        public int id_player { get; set; }
+        public int id_player { get;set;}
         public int points{ get; set; }
         public Score()
         {

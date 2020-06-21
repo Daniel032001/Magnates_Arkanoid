@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Magnates_arkanoid.Controller;
 
 namespace Magnates_arkanoid
 {
@@ -12,15 +13,15 @@ namespace Magnates_arkanoid
         }
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text.Trim().Equals(""))
+            if (txtUser.Text.Trim().Equals(""))//validamos que no quede el campo vacio
             {
                 MessageBox.Show("You have to write your Nickname!");
             }
             else
             {
-                if (PlayerCRUD.VerifyPlayer(txtUsuario.Text))
+                if (PlayerCRUD.VerifyPlayer(txtUser.Text))//verificamos si ya hay un jugador inscrito con ese nickname
                 {
-                    MessageBox.Show("Welcome back "+txtUsuario.Text+"!");
+                    MessageBox.Show("Welcome back "+txtUser.Text+"!");
                     if (onClickAdd != null)
                     {
                         onClickAdd(this, e);
@@ -28,8 +29,8 @@ namespace Magnates_arkanoid
                 }
                 else
                 {
-                    if (PlayerCRUD.createPlayer(txtUsuario.Text))
-                    {
+                    if (PlayerCRUD.createPlayer(txtUser.Text))//creamos un nuevo jugador
+                    { 
                         if (onClickAdd != null)
                         {
                             onClickAdd(this, e);

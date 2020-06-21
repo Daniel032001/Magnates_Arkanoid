@@ -94,7 +94,6 @@
         <Compile Include="Controller\GameData.cs" />
         <Compile Include="Model\Brick.cs" />
         <Compile Include="Model\DataBaseConnection.cs" />
-        <Compile Include="Model\Player.cs" />
         <Compile Include="Model\PlayerCRUD.cs" />
         <Compile Include="Model\Score.cs" />
         <Compile Include="Model\ScoreCRUD.cs" />
@@ -180,8 +179,7 @@
       <Content Include="Resources\5.jpg" />
       <Content Include="Resources\55.jpeg" />
       <Content Include="Resources\add.jpg" />
-      <Content Include="Resources\ball.jpg" />
-      <Content Include="Resources\ball1.jpg" />
+      <Content Include="Resources\ball.png" />
       <Content Include="Resources\play.jpg" />
       <Content Include="Resources\StartMenu.jpg" />
       <Content Include="Resources\table.png" />

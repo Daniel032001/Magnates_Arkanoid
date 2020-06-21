@@ -31,53 +31,57 @@ namespace Magnates_arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnJugar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tblyStart = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnTop = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.tblyStart.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnJugar
+            // tblyStart
             // 
-            this.btnJugar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnJugar.FlatAppearance.BorderSize = 0;
-            this.btnJugar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnJugar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnJugar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJugar.Location = new System.Drawing.Point(251, 232);
-            this.btnJugar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.btnJugar.Name = "btnJugar";
-            this.btnJugar.Size = new System.Drawing.Size(117, 46);
-            this.btnJugar.TabIndex = 0;
-            this.btnJugar.UseVisualStyleBackColor = true;
-            this.btnJugar.Click += new System.EventHandler(this.button1_Click);
+            this.tblyStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tblyStart.BackColor = System.Drawing.Color.Transparent;
+            this.tblyStart.ColumnCount = 3;
+            this.tblyStart.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39F));
+            this.tblyStart.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
+            this.tblyStart.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42F));
+            this.tblyStart.Controls.Add(this.btnExit, 1, 5);
+            this.tblyStart.Controls.Add(this.btnTop, 1, 3);
+            this.tblyStart.Controls.Add(this.btnPlay, 1, 1);
+            this.tblyStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblyStart.Location = new System.Drawing.Point(0, 0);
+            this.tblyStart.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.tblyStart.Name = "tblyStart";
+            this.tblyStart.RowCount = 7;
+            this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48F));
+            this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblyStart.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.5F));
+            this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tblyStart.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.5F));
+            this.tblyStart.Size = new System.Drawing.Size(852, 741);
+            this.tblyStart.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // btnExit
             // 
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42F));
-            this.tableLayoutPanel1.Controls.Add(this.btnJugar, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnTop, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnSalir, 1, 5);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(639, 482);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(335, 581);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(155, 72);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnTop
             // 
@@ -85,47 +89,49 @@ namespace Magnates_arkanoid
             this.btnTop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTop.Location = new System.Drawing.Point(251, 304);
-            this.btnTop.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnTop.Location = new System.Drawing.Point(335, 467);
+            this.btnTop.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.btnTop.Name = "btnTop";
-            this.btnTop.Size = new System.Drawing.Size(117, 46);
-            this.btnTop.TabIndex = 1;
+            this.btnTop.Size = new System.Drawing.Size(155, 72);
+            this.btnTop.TabIndex = 4;
             this.btnTop.UseVisualStyleBackColor = true;
-            this.btnTop.Click += new System.EventHandler(this.btnTop_Click);
+            this.btnTop.Click += new System.EventHandler(this.btnTop_Click_1);
             // 
-            // btnSalir
+            // btnPlay
             // 
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(251, 378);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(117, 46);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnPlay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPlay.FlatAppearance.BorderSize = 0;
+            this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlay.Location = new System.Drawing.Point(335, 357);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(155, 70);
+            this.btnPlay.TabIndex = 3;
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // StartMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Magnates_arkanoid.Properties.Resources.StartMenu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Controls.Add(this.tblyStart);
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "StartMenu";
-            this.Size = new System.Drawing.Size(639, 482);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(852, 741);
+            this.tblyStart.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button btnJugar;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnTop;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 
         #endregion
+
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.TableLayoutPanel tblyStart;
     }
 }

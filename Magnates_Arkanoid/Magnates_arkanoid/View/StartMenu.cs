@@ -13,8 +13,7 @@ namespace Magnates_arkanoid
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPlay_Click(object sender, EventArgs e)//usamos delegates para usarlos en el form para cambiar entre user controls
         {
             if (onClickButton!= null)
             {
@@ -22,7 +21,7 @@ namespace Magnates_arkanoid
             }
         }
 
-        private void btnTop_Click(object sender, EventArgs e)
+        private void btnTop_Click_1(object sender, EventArgs e)
         {
             if (onClickButtonTop!= null)
             {
@@ -30,7 +29,7 @@ namespace Magnates_arkanoid
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             if (OnClickButtonExit!= null)
             {

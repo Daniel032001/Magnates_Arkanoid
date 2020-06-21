@@ -7,40 +7,34 @@ namespace Magnates_arkanoid
 {
     public static class PlayerCRUD
     {
-        public static List<Player> getPlayerId()
-        {
-            List<Player> list = new List<Player>();
+        public static int id_player=0 ,score= 0;
+        public static void getPlayerId()//obtenemos el ultimo id registrado en el caso de los jugadores nuevos para actualizar
+        {                                 //el puntaje si gana
             try
             {
-                string sql = "SELECT max(id) from player ";
+                string sql = "SELECT max(id_player) from player ";
                 DataTable dt = DataBaseConnection.ExecuteQuery(sql);
                 foreach (DataRow information in dt.Rows)
-                {
-                    Player players= new Player();
-                    players.id = Convert.ToInt32(information[0].ToString()); 
-                    list.Add(players);
+                { 
+                    id_player = Convert.ToInt32(information[0].ToString());  
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error" + e);
-            }
-            return list;
+                MessageBox.Show("Error" + e.ToString());
+            } 
         }
 
-        public static bool VerifyPlayer(String player)
+        public static bool VerifyPlayer(String player)//se verifica si el jugador ya esta registrado
         {
-            bool flag = false;
-            List<Player> list = new List<Player>();
+            bool flag = false; 
             try
             {
                 string sql = $"SELECT id_player from player where player='{player}'";
                 DataTable dt = DataBaseConnection.ExecuteQuery(sql); 
                     foreach (DataRow information in dt.Rows)
                     {
-                        Player players = new Player();
-                        players.id = Convert.ToInt32(information[0].ToString());
-                        list.Add(players);
+                        id_player = Convert.ToInt32(information[0].ToString());
                         flag = true;
                     } 
             }
@@ -50,34 +44,68 @@ namespace Magnates_arkanoid
             }
             return flag;
         }
-        public static bool createPlayer(String nickname)
+
+        public static void createScore()//registramos al jugador inicialmente con 0 puntos
+        {
+            try
+            {
+                string sql = String.Format("insert into score(points,id_player)"
+                                           + "values({0},{1})", 0,id_player);
+                DataBaseConnection.Executenonquery(sql);
+                MessageBox.Show("Registered Successfully");
+                getPlayerId();
+            }
+            catch (Exception e)
+            {
+                
+            }
+        }
+        public static bool createPlayer(String nickname)//creamos jugador
         {
             bool flag =false;
             try
             {
                 string sql = String.Format("insert into player(player)"
                                            + "values('{0}')", nickname);
-                    DataBaseConnection.Executenonquery(sql);
-                MessageBox.Show("Registered Successfully");
+                DataBaseConnection.Executenonquery(sql); 
+                getPlayerId();//obtenemos ultimo id
+                createScore();
                 flag = true;
             }
             catch (Exception e)
             {
                 MessageBox.Show("An error has ocurred" + e);
             }
-
             return flag;
         }
 
-        public static void updatePlayerScore(int score,int id)
+        public static void getScore()//obtenemos el score para sumarlo al que obtuvo en la partida 
         {
             try
             {
+                string sql = $"SELECT points from score where id_player='{id_player}'";
+                DataTable dt = DataBaseConnection.ExecuteQuery(sql); 
+                foreach (DataRow information in dt.Rows)
+                {
+                    score = Convert.ToInt32(information[0].ToString()); 
+                } 
+            }
+            catch (Exception e)
+            {
+                
+            }
+        }
+        public static void updatePlayerScore(int points,int id)//actualizamos score
+        {
+            try
+            {
+                getScore();
+                points = points + score;//sumamos el score actual mas el que ya tenia previamente
                 string sql = String.Format(
-                    "update player set score={0} where id={1};",
-                    score,id);
+                    "update score set points={0} where id_player={1};",
+                    points,id);
                 DataBaseConnection.Executenonquery(sql);
-                MessageBox.Show("Updated Score");
+                MessageBox.Show("You Win!");
             }
             catch (Exception e)
             {

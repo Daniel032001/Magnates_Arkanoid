@@ -5,12 +5,12 @@ namespace Magnates_arkanoid.Controller
     public static class GameData
     {
         public static bool startedgame = false;
-        public static int dirX = 15, dirY = -dirX;
+        public static int dirX = 20, dirY = -dirX;
         public static int lifes = 3;
         public static int points= 0;
-        public static void calculatePoints(String brick)
-        {
-            switch (brick)
+        public static void calculatePoints(String brick)//dependiendo del valor de la propiedad tag de los bloques
+        {                                            //asignamos una cantidad de puntos y la imagen del bloque agrietado si 
+            switch (brick)                            //resiste mas de un golpe
             {
                 case "11.jpeg":
                 case "44.jpeg":

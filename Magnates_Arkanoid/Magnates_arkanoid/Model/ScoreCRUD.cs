@@ -7,7 +7,7 @@ namespace Magnates_arkanoid
 {
     public static class ScoreCRUD
     {
-        public static List<Score> loadTopPlayers()
+        public static List<Score> loadTopPlayers()//cargamos el top 10 de jugadores 
         {
             List<Score> list = new List<Score>();
             try

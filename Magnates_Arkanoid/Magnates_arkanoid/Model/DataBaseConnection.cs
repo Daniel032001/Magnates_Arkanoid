@@ -3,7 +3,7 @@ using Npgsql;
 namespace Magnates_arkanoid
 {
     public static class DataBaseConnection
-    { 
+    { //conexion a la base
             public static string Connection =
                 "Server=localhost;Port=5432;User Id=postgres;Password=Strowyer117;Database=Magnates_Arkanoid;"; 
             public static DataTable ExecuteQuery(string sql)

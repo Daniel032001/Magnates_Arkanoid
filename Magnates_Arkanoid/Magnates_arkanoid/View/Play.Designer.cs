@@ -33,7 +33,7 @@ namespace Magnates_arkanoid
         {
             this.components = new System.ComponentModel.Container();
             this.ptbTable = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tmGame = new System.Windows.Forms.Timer(this.components);
             this.lblLifes = new System.Windows.Forms.Label();
             this.lblPoints = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize) (this.ptbTable)).BeginInit();
@@ -53,9 +53,9 @@ namespace Magnates_arkanoid
             this.ptbTable.TabIndex = 2;
             this.ptbTable.TabStop = false;
             // 
-            // timer1
+            // tmGame
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tmGame.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblLifes
             // 
@@ -103,7 +103,7 @@ namespace Magnates_arkanoid
         }
 
         private System.Windows.Forms.PictureBox ptbTable;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tmGame;
 
         #endregion
 

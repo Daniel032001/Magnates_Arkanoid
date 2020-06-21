@@ -29,13 +29,25 @@ namespace Magnates_arkanoid
                 return handleParam;
             }
         }
-        private void MainMenu_Load(object sender, EventArgs e)
+        private void MainMenu_Load(object sender, EventArgs e)//inicializamos todos los users para cargarlos en el form
         {
-            
             start=new StartMenu();
             start.Dock = DockStyle.Fill;
             start.Width = Width;
             start.Height = Height;
+            loadGameComponents();
+            start.onClickButton += onClickJugar;//metodos suscritos a los delegates para cambiar entre user controls
+            start.onClickButtonTop += onClickTop; 
+            start.OnClickButtonExit += onClickExit;
+            Controls.Add(start);
+        }
+
+        public void loadGameComponents()//cargamos user controls
+        {
+            user=new User();
+            user.Dock = DockStyle.Fill;
+            user.Width = Width;
+            user.Height = Height;
             play = new Play();
             play.Dock = DockStyle.Fill;
             play.Width = Width;
@@ -44,27 +56,28 @@ namespace Magnates_arkanoid
             top.Dock = DockStyle.Fill;
             top.Width = Width;
             top.Height = Height;
-            Controls.Add(start);
-            user=new User();
-            user.Dock = DockStyle.Fill;
-            user.Width = Width;
-            user.Height = Height;
-            user.onClickAdd += onClickAdd;
-            start.onClickButton += onClickJugar;
-            start.onClickButtonTop += OnClickTop; 
-            start.OnClickButtonExit += OnClickExit;
             user.onClickBack+=onClickBack;
+            user.onClickAdd += onClickAdd;
+            play.endedGame += onFinishGame;
+            top.onClickBackTop += onClickBackTop;
         }
-
-        public void OnClickTop(object sender, EventArgs e)
+        public void reloadGame()//reiniciamos los user controls al finalizar una partida
+        {
+            play= null;
+            user = null;
+            top = null;
+            loadGameComponents();
+        }
+        public void onClickTop(object sender, EventArgs e)
         {
             Controls.Remove(start);
             Controls.Add(top);
         }
-        public void OnClickExit(object sender, EventArgs e)
+        public void onClickExit(object sender, EventArgs e)
         {
+            MessageBox.Show("Thanks for play!");
             Application.Exit();
-        }
+        }//cambiamos entre user controls
         public void onClickJugar(object sender, EventArgs e)
         {
             Controls.Remove(start); ;
@@ -72,15 +85,26 @@ namespace Magnates_arkanoid
         }
 
         public void onClickAdd(object sender, EventArgs e)
-        { 
-           // if(user.txtUsuario.Text.Trim().Equals(""))
+        {
             Controls.Remove(user); 
             Controls.Add(play);
         }
+
+        public void onFinishGame()
+        {
+            Controls.Remove(play);
+            Controls.Add(start);
+            reloadGame();
+        }
         public void onClickBack(object sender, EventArgs e)
-        { 
-            // if(user.txtUsuario.Text.Trim().Equals(""))
+        {  
             Controls.Remove(user); 
+            Controls.Add(start);
+        }
+
+        public void onClickBackTop(object sender, EventArgs e)
+        {
+            Controls.Remove(top);
             Controls.Add(start);
         }
     }

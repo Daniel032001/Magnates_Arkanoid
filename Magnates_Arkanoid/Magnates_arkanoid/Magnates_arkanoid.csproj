@@ -96,6 +96,8 @@
         <Compile Include="Model\DataBaseConnection.cs" />
         <Compile Include="Model\Player.cs" />
         <Compile Include="Model\PlayerCRUD.cs" />
+        <Compile Include="Model\Score.cs" />
+        <Compile Include="Model\ScoreCRUD.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="View\MainMenu.cs">

@@ -8,6 +8,9 @@ namespace Magnates_arkanoid
         public Top()
         {
             InitializeComponent();
+            dtgTop.DataSource = ScoreCRUD.loadTopPlayers();
+            dtgTop.Columns[2].Visible = false;
+            dtgTop.Columns[0].Visible = false;
         }
     }
 }

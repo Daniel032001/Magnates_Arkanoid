@@ -7,30 +7,6 @@ namespace Magnates_arkanoid
 {
     public static class PlayerCRUD
     {
-        public static List<Player> loadTopPlayers()
-        {
-            List<Player> list = new List<Player>();
-            try
-            {
-                string sql = "SELECT id,nickname,score from player order by score DESC limit 10";
-                DataTable dt = DataBaseConnection.ExecuteQuery(sql);
-                foreach (DataRow information in dt.Rows)
-                {
-                    Player top = new Player();
-                    top.id = Convert.ToInt32(information[0].ToString());
-                    top.nickname = information[1].ToString();
-                    top.score = Convert.ToInt32(information[2].ToString());
-                    list.Add(top);
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error" + e);
-            }
-
-            return list;
-        }
-
         public static List<Player> getPlayerId()
         {
             List<Player> list = new List<Player>();
@@ -49,22 +25,48 @@ namespace Magnates_arkanoid
             {
                 MessageBox.Show("Error" + e);
             }
-
             return list;
         }
-        public static void createPlayer(String nickname)
+
+        public static bool VerifyPlayer(String player)
         {
+            bool flag = false;
+            List<Player> list = new List<Player>();
             try
             {
-                string sql = String.Format("insert into player(nickname,score)"
-                                           + "values('{0}',{1})", nickname, 0);
+                string sql = $"SELECT id_player from player where player='{player}'";
+                DataTable dt = DataBaseConnection.ExecuteQuery(sql); 
+                    foreach (DataRow information in dt.Rows)
+                    {
+                        Player players = new Player();
+                        players.id = Convert.ToInt32(information[0].ToString());
+                        list.Add(players);
+                        flag = true;
+                    } 
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error" + e);
+            }
+            return flag;
+        }
+        public static bool createPlayer(String nickname)
+        {
+            bool flag =false;
+            try
+            {
+                string sql = String.Format("insert into player(player)"
+                                           + "values('{0}')", nickname);
                     DataBaseConnection.Executenonquery(sql);
                 MessageBox.Show("Registered Successfully");
+                flag = true;
             }
             catch (Exception e)
             {
                 MessageBox.Show("An error has ocurred" + e);
             }
+
+            return flag;
         }
 
         public static void updatePlayerScore(int score,int id)

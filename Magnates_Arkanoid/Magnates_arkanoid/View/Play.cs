@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Magnates_arkanoid.Controller;
+using NpgsqlTypes;
 
 namespace Magnates_arkanoid
 {
@@ -53,7 +54,7 @@ namespace Magnates_arkanoid
         }
         public void loadBricks()
         {
-            int rows = 4, columns = 10;
+            int rows = 2, columns = 2;
             int brickHeight = (int) (Height * 0.24) / rows;
             int brickWidth = Width / columns;
             Bricks = new Brick[rows, columns];
@@ -126,7 +127,7 @@ namespace Magnates_arkanoid
             {
                 GameData.lifes --; 
                 if (GameData.lifes > 0)
-               { 
+                { 
                     Controls.Remove(ball);
                     ball = null;
                     GameData.dirX=15;
@@ -142,6 +143,11 @@ namespace Magnates_arkanoid
                 }
             }
 
+            if (ball.Top < (int) (Height * 0.24)/2)//cambiar esto
+            {
+                GameData.dirY = -GameData.dirY;
+                return;
+            }
             if (ball.Left < 0 || ball.Right > Width)
             {
                 GameData.dirX = -GameData.dirX;
@@ -153,9 +159,9 @@ namespace Magnates_arkanoid
                 GameData.dirY = -GameData.dirY;
             }
 
-            for (int i = 3; i >= 0; i--)
+            for (int i = 1; i >= 0; i--)
             {
-                for (int j = 0; j < 10; j++)
+                for (int j = 0; j < 2; j++)
                 {
                     if (Bricks[i, j] != null && ball.Bounds.IntersectsWith(Bricks[i, j].Bounds))
                     {
@@ -172,7 +178,7 @@ namespace Magnates_arkanoid
                             String imagen = Bricks[i, j].Tag.ToString().Substring(0, 1);
                             String nuevaimagen = imagen+Bricks[i, j].Tag.ToString().Substring(0,2); 
                             Bricks[i,j].BackgroundImage=Image.FromFile("../../resources/"+nuevaimagen+"jpeg");
-                            Bricks[i, j].Tag = nuevaimagen + "jpeg";
+                            Bricks[i,j].Tag = nuevaimagen + "jpeg";
                         }
                         GameData.dirY = -GameData.dirY;
                         return;

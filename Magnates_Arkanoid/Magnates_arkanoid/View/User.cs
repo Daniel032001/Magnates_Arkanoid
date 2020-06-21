@@ -5,17 +5,45 @@ namespace Magnates_arkanoid
 {
     public partial class User : UserControl
     {
-        public StartMenu.EventUserControlStart onClickAdd;
+        public StartMenu.EventUserControlStart onClickAdd,onClickBack;
         public User()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+        }
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("You have to write your Nickname!");
+            }
+            else
+            {
+                if (PlayerCRUD.VerifyPlayer(txtUsuario.Text))
+                {
+                    MessageBox.Show("Welcome back "+txtUsuario.Text+"!");
+                    if (onClickAdd != null)
+                    {
+                        onClickAdd(this, e);
+                    }
+                }
+                else
+                {
+                    if (PlayerCRUD.createPlayer(txtUsuario.Text))
+                    {
+                        if (onClickAdd != null)
+                        {
+                            onClickAdd(this, e);
+                        }
+                    }    
+                }
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            if (onClickAdd!= null)
+            if (onClickBack != null)
             {
-                onClickAdd(this,e);
+                onClickBack(this, e);
             }
         }
     }

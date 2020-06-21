@@ -16,6 +16,8 @@
           <e p="DataBaseConnection.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PlayerCRUD.cs" t="Include" />
+          <e p="Score.cs" t="Include" />
+          <e p="ScoreCRUD.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />

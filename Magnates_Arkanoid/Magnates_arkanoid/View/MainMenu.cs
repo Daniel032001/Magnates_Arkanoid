@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Drawing;
 using System.Windows.Forms;
+using Microsoft.SqlServer.Server;
 
 namespace Magnates_arkanoid
 {
@@ -52,6 +53,7 @@ namespace Magnates_arkanoid
             start.onClickButton += onClickJugar;
             start.onClickButtonTop += OnClickTop; 
             start.OnClickButtonExit += OnClickExit;
+            user.onClickBack+=onClickBack;
         }
 
         public void OnClickTop(object sender, EventArgs e)
@@ -71,8 +73,15 @@ namespace Magnates_arkanoid
 
         public void onClickAdd(object sender, EventArgs e)
         { 
+           // if(user.txtUsuario.Text.Trim().Equals(""))
             Controls.Remove(user); 
-            Controls.Add(play); 
+            Controls.Add(play);
+        }
+        public void onClickBack(object sender, EventArgs e)
+        { 
+            // if(user.txtUsuario.Text.Trim().Equals(""))
+            Controls.Remove(user); 
+            Controls.Add(start);
         }
     }
 }

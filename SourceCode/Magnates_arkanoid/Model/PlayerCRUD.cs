@@ -99,6 +99,7 @@ namespace Magnates_arkanoid
         {
             try
             {
+                getScore();
                 if(score<points)
                 {
                     //sustituimos la mayor puntuacion del jugador

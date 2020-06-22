@@ -9,9 +9,9 @@ namespace Magnates_arkanoid
         public Top()
         {
             InitializeComponent();
-            dtgTop.DataSource = ScoreCRUD.loadTopPlayers();//cargamos el top 10 y ocultamos id player y el id de los puntajes
-            dtgTop.Columns[2].Visible = false;
-            dtgTop.Columns[0].Visible = false;
+            dtgTop.DataSource = ScoreCRUD.loadTopPlayers();//cargamos el top 10 y 
+            dtgTop.Columns[2].Visible = false;// ocultamos id player
+            dtgTop.Columns[0].Visible = false;//y el id de los puntajes
         }
 
         private void btnBack_Click(object sender, EventArgs e)

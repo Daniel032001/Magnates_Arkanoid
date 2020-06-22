@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Concurrent;
-using System.Drawing;
 using System.Windows.Forms;
 using Magnates_arkanoid.Controller;
-using Microsoft.SqlServer.Server;
 
 namespace Magnates_arkanoid
 {

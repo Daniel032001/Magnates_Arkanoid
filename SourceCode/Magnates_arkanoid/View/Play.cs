@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Magnates_arkanoid.Controller;
-using NpgsqlTypes;
 
 namespace Magnates_arkanoid
 {
@@ -148,8 +147,8 @@ namespace Magnates_arkanoid
                     endedGame?.Invoke();//llamamos al delegate que termina la partida y reinicia algunos componentes
                 }
             }
-
-            if (ball.Top < (int) (Height * 0.24)/4)//validacion para que la bola no pase del limite de los bloques de la ultima fila
+            //validacion para que la bola no pase del limite de los bloques de la ultima fila
+            if (ball.Top < (int) (Height * 0.24)/4)
             {
                 GameData.dirY = -GameData.dirY;
                 return;
@@ -180,7 +179,8 @@ namespace Magnates_arkanoid
                             Bricksdestroyed++;//sumamos la cantidad de bloques destruidos
                             if (Bricksdestroyed==40)//limite de bloques en el juego
                             {
-                                // actualizamos el puntaje y reiniciamos algunos componentes en caso de empezar otra partida
+                                // actualizamos el puntaje
+                                // y reiniciamos algunos componentes en caso de empezar otra partida
                                 tmGame.Stop();  
                                 MessageBox.Show("You Win!");
                                 endedGame?.Invoke();

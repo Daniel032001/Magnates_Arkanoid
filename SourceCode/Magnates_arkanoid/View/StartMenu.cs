@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Magnates_arkanoid
@@ -13,7 +12,8 @@ namespace Magnates_arkanoid
         {
             InitializeComponent();
         }
-        private void btnPlay_Click(object sender, EventArgs e)//usamos delegates para usarlos en el form para cambiar entre user controls
+        //usamos delegates para usarlos en el form para cambiar entre user controls:
+        private void btnPlay_Click(object sender, EventArgs e)
         {
             if (onClickButton!= null)
             {

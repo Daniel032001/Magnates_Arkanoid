@@ -99,12 +99,14 @@ namespace Magnates_arkanoid
         {
             try
             {
-                getScore();
-                points = points + score;//sumamos el score actual mas el que ya tenia previamente
-                string sql = String.Format(
-                    "update score set points={0} where id_player={1};",
-                    points,id);
-                DataBaseConnection.Executenonquery(sql);
+                if(score<points)
+                {
+                    //sustituimos la mayor puntuacion del jugador
+                    string sql = String.Format(
+                        "update score set points={0} where id_player={1};",
+                        points,id);
+                    DataBaseConnection.Executenonquery(sql);   
+                }
             }
             catch (Exception e)
             {

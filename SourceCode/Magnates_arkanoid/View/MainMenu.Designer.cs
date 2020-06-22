@@ -31,6 +31,8 @@ namespace Magnates_arkanoid
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources =
+                new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.SuspendLayout();
             // 
             // MainMenu
@@ -39,6 +41,7 @@ namespace Magnates_arkanoid
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 561);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "MainMenu";
             this.Text = "Magnates Arkanoid";

@@ -144,7 +144,7 @@ namespace Magnates_arkanoid
                 else//si se acaban las vidas
                 {
                     tmGame.Stop(); 
-                    MessageBox.Show("You lost!");  
+                    MessageBox.Show("You lose!");  
                     endedGame?.Invoke();//llamamos al delegate que termina la partida y reinicia algunos componentes
                 }
             }

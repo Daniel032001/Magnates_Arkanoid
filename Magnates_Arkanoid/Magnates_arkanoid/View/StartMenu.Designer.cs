@@ -43,30 +43,25 @@ namespace Magnates_arkanoid
             this.tblyStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tblyStart.BackColor = System.Drawing.Color.Transparent;
             this.tblyStart.ColumnCount = 3;
-            this.tblyStart.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39F));
-            this.tblyStart.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
-            this.tblyStart.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42F));
+            this.tblyStart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39F));
+            this.tblyStart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19F));
+            this.tblyStart.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42F));
             this.tblyStart.Controls.Add(this.btnExit, 1, 5);
             this.tblyStart.Controls.Add(this.btnTop, 1, 3);
             this.tblyStart.Controls.Add(this.btnPlay, 1, 1);
             this.tblyStart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblyStart.Location = new System.Drawing.Point(0, 0);
-            this.tblyStart.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.tblyStart.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.tblyStart.Name = "tblyStart";
             this.tblyStart.RowCount = 7;
             this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48F));
             this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblyStart.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.5F));
+            this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.5F));
             this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tblyStart.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.5F));
-            this.tblyStart.Size = new System.Drawing.Size(852, 741);
+            this.tblyStart.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.5F));
+            this.tblyStart.Size = new System.Drawing.Size(639, 482);
             this.tblyStart.TabIndex = 1;
             // 
             // btnExit
@@ -75,10 +70,10 @@ namespace Magnates_arkanoid
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(335, 581);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnExit.Location = new System.Drawing.Point(251, 378);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(155, 72);
+            this.btnExit.Size = new System.Drawing.Size(117, 46);
             this.btnExit.TabIndex = 5;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -89,10 +84,10 @@ namespace Magnates_arkanoid
             this.btnTop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTop.Location = new System.Drawing.Point(335, 467);
-            this.btnTop.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.btnTop.Location = new System.Drawing.Point(251, 304);
+            this.btnTop.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTop.Name = "btnTop";
-            this.btnTop.Size = new System.Drawing.Size(155, 72);
+            this.btnTop.Size = new System.Drawing.Size(117, 46);
             this.btnTop.TabIndex = 4;
             this.btnTop.UseVisualStyleBackColor = true;
             this.btnTop.Click += new System.EventHandler(this.btnTop_Click_1);
@@ -104,34 +99,33 @@ namespace Magnates_arkanoid
             this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Location = new System.Drawing.Point(335, 357);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlay.Location = new System.Drawing.Point(251, 232);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(155, 70);
+            this.btnPlay.Size = new System.Drawing.Size(117, 46);
             this.btnPlay.TabIndex = 3;
             this.btnPlay.UseVisualStyleBackColor = true;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // StartMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Magnates_arkanoid.Properties.Resources.StartMenu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.tblyStart);
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "StartMenu";
-            this.Size = new System.Drawing.Size(852, 741);
+            this.Size = new System.Drawing.Size(639, 482);
             this.tblyStart.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button btnTop;
-
-        #endregion
-
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnTop;
         private System.Windows.Forms.TableLayoutPanel tblyStart;
+
+        #endregion
     }
 }

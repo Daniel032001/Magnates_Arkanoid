@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -8,8 +7,9 @@ namespace Magnates_arkanoid
     public static class PlayerCRUD
     {
         public static int id_player=0 ,score= 0;
-        public static void getPlayerId()//obtenemos el ultimo id registrado en el caso de los jugadores nuevos para actualizar
-        {                                 //el puntaje si gana
+        public static void getPlayerId()//obtenemos el ultimo id registrado en el caso de los jugadores nuevos para
+                                        //actualizar el puntaje si gana
+        {                                 
             try
             {
                 string sql = "SELECT max(id_player) from player ";

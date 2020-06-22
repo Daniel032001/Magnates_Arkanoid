@@ -22,7 +22,6 @@ namespace Magnates_arkanoid
             action+= bounce;
             Bricksdestroyed = 0;
         }
-
         protected override CreateParams CreateParams//Mejora en la interfaz grafica 
         {
             get
@@ -32,7 +31,6 @@ namespace Magnates_arkanoid
                 return handleParam;
             }
         }
-
         private void Game_Load(object sender, EventArgs e)
         {
             loadBricks();//cargamos los bloques, las labels para indicar las vidas,puntos,la bola y la tabla
@@ -46,7 +44,6 @@ namespace Magnates_arkanoid
             ball.Top = ptbTable.Top - ball.Height-20;
             tmGame.Start();
         }
-
         public void LoadBall()//metodo que carga la bola y la configura
         {
             ball = new PictureBox();
@@ -76,7 +73,6 @@ namespace Magnates_arkanoid
                     {
                         Bricks[i, k].hits = 1;
                     }
-
                     Bricks[i, k].Height = brickHeight;
                     Bricks[i, k].Width = brickWidth;
                     Bricks[i, k].Left = k * brickWidth;
@@ -128,6 +124,7 @@ namespace Magnates_arkanoid
             ball.Left += GameData.dirX;
             ball.Top += GameData.dirY;
         }
+        
         private void bounce()//metodo para que la bola rebote
         {
             if (ball.Bottom > Height)//si la bola cae
@@ -147,7 +144,7 @@ namespace Magnates_arkanoid
                 else//si se acaban las vidas
                 {
                     tmGame.Stop();
-                    MessageBox.Show("Has perdido");
+                    MessageBox.Show("You lost!");
                     endedGame?.Invoke();//llamamos al delegate que termina la partida y reinicia algunos componentes
                 }
             }
@@ -184,13 +181,8 @@ namespace Magnates_arkanoid
                             if (Bricksdestroyed==40)//limite de bloques en el juego
                             {
                                 // actualizamos el puntaje y reiniciamos algunos componentes en caso de empezar otra partida
-                                tmGame.Stop(); 
-                                PlayerCRUD.updatePlayerScore(GameData.points,PlayerCRUD.id_player);
-                                GameData.lifes = 3;
-                                GameData.points = 0;
-                                GameData.dirX = 20;
-                                GameData.dirY = -GameData.dirX;
-                                GameData.startedgame = false;
+                                tmGame.Stop();  
+                                MessageBox.Show("You Win!");
                                 endedGame?.Invoke();
                             }
                         }

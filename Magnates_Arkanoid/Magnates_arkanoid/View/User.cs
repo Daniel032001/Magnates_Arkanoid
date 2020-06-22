@@ -13,30 +13,46 @@ namespace Magnates_arkanoid
         }
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text.Trim().Equals(""))//validamos que no quede el campo vacio
+            try
             {
-                MessageBox.Show("You have to write your Nickname!");
-            }
-            else
-            {
-                if (PlayerCRUD.VerifyPlayer(txtUser.Text))//verificamos si ya hay un jugador inscrito con ese nickname
+                if (txtUser.Text.Trim().Equals("")) //validamos que no quede el campo vacio
                 {
-                    MessageBox.Show("Welcome back "+txtUser.Text+"!");
-                    if (onClickAdd != null)
-                    {
-                        onClickAdd(this, e);
-                    }
+                    throw new NullNickname("You have to write your nick name");
+                }
+                else if (txtUser.Text.Length > 15)
+                {
+                    throw new InvalidLength("You have to write a nickname with less letters");
                 }
                 else
                 {
-                    if (PlayerCRUD.createPlayer(txtUser.Text))//creamos un nuevo jugador
-                    { 
+                    if (PlayerCRUD.VerifyPlayer(txtUser.Text)
+                    ) //verificamos si ya hay un jugador inscrito con ese nickname
+                    {
+                        MessageBox.Show("Welcome back " + txtUser.Text + "!");
                         if (onClickAdd != null)
                         {
                             onClickAdd(this, e);
                         }
-                    }    
+                    }
+                    else
+                    {
+                        if (PlayerCRUD.createPlayer(txtUser.Text)) //creamos un nuevo jugador
+                        {
+                            if (onClickAdd != null)
+                            {
+                                onClickAdd(this, e);
+                            }
+                        }
+                    }
                 }
+            }
+            catch (InvalidLength inv)
+            {
+                MessageBox.Show(inv.Message);
+            }
+            catch (NullNickname nullnick)
+            {
+                MessageBox.Show(nullnick.Message);
             }
         }
 

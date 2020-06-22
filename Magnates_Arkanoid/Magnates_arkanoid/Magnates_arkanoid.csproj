@@ -92,6 +92,9 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Controller\GameData.cs" />
+        <Compile Include="Controller\InvalidLength.cs" />
+        <Compile Include="Controller\InvalidTag.cs" />
+        <Compile Include="Controller\NullNickname.cs" />
         <Compile Include="Model\Brick.cs" />
         <Compile Include="Model\DataBaseConnection.cs" />
         <Compile Include="Model\PlayerCRUD.cs" />

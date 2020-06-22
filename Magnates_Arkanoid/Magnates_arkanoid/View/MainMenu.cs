@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Drawing;
 using System.Windows.Forms;
+using Magnates_arkanoid.Controller;
 using Microsoft.SqlServer.Server;
 
 namespace Magnates_arkanoid
@@ -36,7 +37,7 @@ namespace Magnates_arkanoid
             start.Width = Width;
             start.Height = Height;
             loadGameComponents();
-            start.onClickButton += onClickJugar;//metodos suscritos a los delegates para cambiar entre user controls
+            start.onClickButton += onClickPlay;//metodos suscritos a los delegates para cambiar entre user controls
             start.onClickButtonTop += onClickTop; 
             start.OnClickButtonExit += onClickExit;
             Controls.Add(start);
@@ -66,6 +67,12 @@ namespace Magnates_arkanoid
             play= null;
             user = null;
             top = null;
+            PlayerCRUD.updatePlayerScore(GameData.points,PlayerCRUD.id_player);
+            GameData.lifes = 3;
+            GameData.points = 0;
+            GameData.dirX = 20;
+            GameData.dirY = -GameData.dirX;
+            GameData.startedgame = false;
             loadGameComponents();
         }
         public void onClickTop(object sender, EventArgs e)
@@ -78,9 +85,9 @@ namespace Magnates_arkanoid
             MessageBox.Show("Thanks for play!");
             Application.Exit();
         }//cambiamos entre user controls
-        public void onClickJugar(object sender, EventArgs e)
+        public void onClickPlay(object sender, EventArgs e)
         {
-            Controls.Remove(start); ;
+            Controls.Remove(start);
             Controls.Add(user);
         }
 
@@ -100,6 +107,13 @@ namespace Magnates_arkanoid
         {  
             Controls.Remove(user); 
             Controls.Add(start);
+            user = null;
+            user=new User();
+            user.Dock = DockStyle.Fill;
+            user.Width = Width;
+            user.Height = Height; 
+            user.onClickBack+=onClickBack;
+            user.onClickAdd += onClickAdd;
         }
 
         public void onClickBackTop(object sender, EventArgs e)

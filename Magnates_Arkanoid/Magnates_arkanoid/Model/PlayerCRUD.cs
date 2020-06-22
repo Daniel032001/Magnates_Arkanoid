@@ -21,7 +21,7 @@ namespace Magnates_arkanoid
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error" + e.ToString());
+                MessageBox.Show("Error" + e.Message);
             } 
         }
 
@@ -40,7 +40,7 @@ namespace Magnates_arkanoid
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error" + e);
+                MessageBox.Show("Error" + e.Message);
             }
             return flag;
         }
@@ -57,7 +57,7 @@ namespace Magnates_arkanoid
             }
             catch (Exception e)
             {
-                
+                MessageBox.Show(e.Message);
             }
         }
         public static bool createPlayer(String nickname)//creamos jugador
@@ -74,7 +74,7 @@ namespace Magnates_arkanoid
             }
             catch (Exception e)
             {
-                MessageBox.Show("An error has ocurred" + e);
+                MessageBox.Show("An error has ocurred" + e.Message);
             }
             return flag;
         }
@@ -92,7 +92,7 @@ namespace Magnates_arkanoid
             }
             catch (Exception e)
             {
-                
+                MessageBox.Show("An error has ocurred" + e.Message);
             }
         }
         public static void updatePlayerScore(int points,int id)//actualizamos score
@@ -105,11 +105,10 @@ namespace Magnates_arkanoid
                     "update score set points={0} where id_player={1};",
                     points,id);
                 DataBaseConnection.Executenonquery(sql);
-                MessageBox.Show("You Win!");
             }
             catch (Exception e)
             {
-                MessageBox.Show("An error has ocurred" + e);
+                MessageBox.Show("An error has ocurred" + e.Message);
             }
         }
     }

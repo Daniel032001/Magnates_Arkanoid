@@ -34,9 +34,9 @@ namespace Magnates_arkanoid
             System.ComponentModel.ComponentResourceManager resources =
                 new System.ComponentModel.ComponentResourceManager(typeof(User));
             this.tblyUser = new System.Windows.Forms.TableLayoutPanel();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.tblyUser.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,18 @@ namespace Magnates_arkanoid
                 new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.35849F));
             this.tblyUser.Size = new System.Drawing.Size(892, 815);
             this.tblyUser.TabIndex = 1;
+            // 
+            // txtUser
+            // 
+            this.txtUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
+                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.txtUser.Location = new System.Drawing.Point(180, 465);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(503, 46);
+            this.txtUser.TabIndex = 5;
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnPlay
             // 
@@ -116,18 +128,6 @@ namespace Magnates_arkanoid
             this.btnBack.Text = "Regresar";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // txtUser
-            // 
-            this.txtUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
-                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtUser.Location = new System.Drawing.Point(180, 465);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(503, 46);
-            this.txtUser.TabIndex = 5;
-            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // User
             // 

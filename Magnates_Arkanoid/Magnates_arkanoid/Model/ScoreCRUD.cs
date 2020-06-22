@@ -26,7 +26,7 @@ namespace Magnates_arkanoid
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error : " + e.ToString());
+                MessageBox.Show("Error : " + e.Message);
             }
             return list;
         }

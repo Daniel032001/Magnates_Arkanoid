@@ -9,6 +9,9 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controller" t="Include">
           <e p="GameData.cs" t="Include" />
+          <e p="InvalidLength.cs" t="Include" />
+          <e p="InvalidTag.cs" t="Include" />
+          <e p="NullNickname.cs" t="Include" />
         </e>
         <e p="Magnates_Arkanoid.csproj" t="IncludeRecursive" />
         <e p="Model" t="Include">

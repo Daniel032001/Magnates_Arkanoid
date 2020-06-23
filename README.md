@@ -1,11 +1,10 @@
 <ol>
   <li>#Magnates Arkanoid</li>  
   <li>Integrantes</li>
-  <li>Felix Gerardo Guevara Palacios 00055419</li>
-  <li>Jose Daniel Mauricio Guerrero 00089719</li>
-  <li>Rodrigo Alejandro Fernandez Leiva 00157219</li>
-  <li>Rodrigo Efrain Figueroa Aguirre 00157219</li>
-  <li></li>
+  <p>Felix Gerardo Guevara Palacios 00055419</p>
+  <p>Jose Daniel Mauricio Guerrero 00089719</p>
+  <p>Rodrigo Alejandro Fernandez Leiva 00157219</p>
+  <p>Rodrigo Efrain Figueroa Aguirre 00157219</p> 
   <li>IDE: Rider </li>
   <li>FAQ'S 📋
     <ul>

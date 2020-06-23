@@ -1,5 +1,5 @@
 <ol>
-  <li>#Magnates Arkanoid</li>  
+  <li>Magnates Arkanoid</li>  
   <li>Integrantes</li>
   <p>Felix Gerardo Guevara Palacios 00055419</p>
   <p>Jose Daniel Mauricio Guerrero 00089719</p>
